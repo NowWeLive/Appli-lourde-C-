@@ -102,7 +102,7 @@ namespace Radouham
         #region Clientele
         private void btnAjCli_Click(object sender, RoutedEventArgs e)
         {
-            lesClienteles.Add(new Clientele(Convert.ToInt32(txtNumCli.Text), txtNom.Text, txtPrenom.Text, txtMail.Text, Convert.ToInt32(txtDateNaiss.Text), txtVille.Text, Convert.ToInt32(txtCP.Text)));
+            /*lesClienteles.Add(new Clientele(Convert.ToInt32(txtNumCli.Text), txtNom.Text, txtPrenom.Text, txtMail.Text, Convert.ToInt32(txtDateNaiss.Text), txtVille.Text, Convert.ToInt32(txtCP.Text)));
             Clientele NewClientele = new Clientele();
 
             NewClientele.Num = Convert.ToInt32(txtNumCli.Text);
@@ -114,7 +114,11 @@ namespace Radouham
             NewClientele.CP = Convert.ToInt32(txtCP.Text);
             
 
-            Bdd.InsertClient(NewClientele.Nom,NewClientele.Prenom, NewClientele.Mail, NewClientele.Tel, NewClientele.Ville, NewClientele.CP);
+            Bdd.InsertClient(NewClientele.Nom,NewClientele.Prenom, NewClientele.Mail, NewClientele.Tel, NewClientele.Ville, NewClientele.CP);*/
+
+            lesClienteles.Add(new Clientele(Convert.ToInt32(txtNumCli.Text), txtNom.Text, txtPrenom.Text, txtMail.Text, Convert.ToInt32(txtDateNaiss.Text), txtVille.Text, Convert.ToInt32(txtCP.Text)));
+            DtgRdv.ItemsSource = null;
+            DtgRdv.ItemsSource = lesRendezVous;
         }
 
 
@@ -327,7 +331,7 @@ namespace Radouham
             }
         }
         #endregion
-        class Program
+        /*class Program
         {
             static void Main(string[] args)
             {
@@ -354,7 +358,7 @@ namespace Radouham
                 // car il est recommandé de laisser la connexion ouverte aussi longtemps que nécessaire.
                 //Bdd.CloseConnection();
             }
-        }
+        }*/
 
     }
 }
